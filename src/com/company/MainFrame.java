@@ -99,13 +99,10 @@ public class MainFrame extends JFrame {
         hboxVariables.add(labelForY);
         hboxVariables.add(Box.createHorizontalStrut(10));
         hboxVariables.add(textFieldY);
-
-        //добавление Z поля
         hboxVariables.add(Box.createHorizontalStrut(100));
         hboxVariables.add(labelForZ);
         hboxVariables.add(Box.createHorizontalStrut(10));
         hboxVariables.add(textFieldZ);
-
         hboxVariables.add(Box.createHorizontalGlue());
         // Создать область для вывода результата
         JLabel labelForResult = new JLabel("Результат:");
