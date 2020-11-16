@@ -65,7 +65,6 @@ public class MainFrame extends JFrame {
     public MainFrame() {
         super("Вычисление формулы");
         Formula f = new Formula();
-        double buffer = 0.0;
         setSize(WIDTH, HEIGHT);
         Toolkit kit = Toolkit.getDefaultToolkit();
         // Отцентрировать окно приложения на экране
