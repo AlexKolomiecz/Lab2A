@@ -19,7 +19,6 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 //используется, чтобы постоянно не писать Math. для функций
-import static java.lang.Math.*;
 
 
 @SuppressWarnings("serial")
