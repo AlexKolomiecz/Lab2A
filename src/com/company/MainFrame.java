@@ -48,6 +48,7 @@ public class MainFrame extends JFrame {
     private Box hboxFormulaType = Box.createHorizontalBox();
 
     private int formulaId = 1;
+    private Double temp = 0.0;
 
 // Вспомогательный метод для добавления кнопок на панель
     private void addRadioButton(String buttonName, final int formulaId) {
@@ -106,7 +107,7 @@ public class MainFrame extends JFrame {
         // Создать область для вывода результата
         JLabel labelForResult = new JLabel("Результат:");
         //labelResult = new JLabel("0");
-        textFieldResult = new JTextField("0", 10);
+        textFieldResult = new JTextField("0", 20);
         textFieldResult.setMaximumSize( textFieldResult.getPreferredSize());
         Box hboxResult = Box.createHorizontalBox();
         hboxResult.add(Box.createHorizontalGlue());
@@ -128,7 +129,7 @@ public class MainFrame extends JFrame {
                     else
                         result = f.calculate2(x, y, z);
                     textFieldResult.setText(result.toString());
-                    f.Set(result);
+                    temp = result;
                 }
                 catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(MainFrame.this, "Ошибка в формате записи числа с плавающей точкой", "Ошибочный формат числа", JOptionPane.WARNING_MESSAGE);
@@ -147,7 +148,7 @@ public class MainFrame extends JFrame {
         JButton buttonSum = new JButton("M+");
         buttonSum.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
-                f.Sum(f.Get());
+                f.Sum(temp);
                 textFieldResult.setText(Double.toString(f.Get()));
             }
         });
